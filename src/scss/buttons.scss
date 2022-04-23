@@ -1,0 +1,13 @@
+button {
+    font-family: "Roboto", sans-serif!important;
+    line-height: 1.5!important;
+}
+
+button.brownie {
+    background-color: $bg_button!important;
+    border-color: darken($bg_button, 5%);
+    color: white!important;
+    &:hover {
+        background-color: $bg_button-hover!important;
+    }
+}

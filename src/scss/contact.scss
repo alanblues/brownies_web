@@ -1,0 +1,13 @@
+.form {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+
+    @media only screen and (max-width: 800px) {
+        width: 95%;
+    }
+
+    @media only screen and (max-width: 400px) {
+        width: 100%;
+    }
+}

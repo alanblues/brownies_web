@@ -1,0 +1,29 @@
+.home .home_icons .icon {
+    width: 150px;
+    @media only screen and (max-width: 821px) {
+        width: 140px;
+    }
+    @media only screen and (max-width: 560px) {
+        width: 153px;
+    }
+    @media only screen and (max-width: 540px) {
+        width: 140px;
+    }
+    @media only screen and (max-width: 510px) {
+        width: 133px;
+    }
+    @media only screen and (max-width: 477px) {
+        width: 122px;
+    }
+    @media only screen and (max-width: 470px) {
+        // width: 115px;
+        width: 168px;
+    }
+    @media only screen and (max-width: 428px) {
+        width: 45%;
+        // width: 163px;
+    }
+    @media only screen and (max-width: 328px) {
+        width: 135px;
+    }
+}

@@ -1,0 +1,56 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+@import "./titles.scss";
+
+@import "./buttons.scss";
+@import "./contact.scss";
+@import "./footer.scss";
+@import "./home.scss";
+@import "./menu.scss";
+@import "./testimony.scss";
+
+@import "./home.mobile.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.rem-16 {
+    width: 16rem;
+}
+
+.banner {
+    background-color: $banner;
+    &_info {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+        flex-direction: column;
+        padding: 50px 20px;
+        @media only screen and (max-width: 800px) {
+            width: 95%;
+        }
+    
+        @media only screen and (max-width: 400px) {
+            width: 100%;
+        }
+
+        h2 {
+            color: black;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+    }
+}
