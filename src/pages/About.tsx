@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import Layout from "../layout/Layout";
 import styled from "styled-components";
+import { pictures } from "../utilites/images";
 
 const About = styled.section`
     width: 80%;
-    margin: 30px auto;
+    margin: 15px auto;
     padding: 20px;
     @media only screen and (max-width: 800px) {
         width: 95%;
@@ -18,20 +19,26 @@ const Titulo = styled.h1`margin-bottom: 20px`;
 
 const Contenido = styled.p`text-align: justify;`;
 
-const Boton = styled.button`
-    margin-top: 20px;
-    @media only screen and (max-width: 380px) {
-        width: 100%
-    }
-`;
 
-const Lin = styled(Link)`
+const Linkeo = styled(Link)`
     color: #64442e;
-    font-size: 16x;
+    font-size: 16px;
     &:hover {
         color: #64442e;
         border-bottom: 1px solid #64442e;
     }
+`;
+
+const Imagen = styled.img`
+    height: 215px;
+    float: left;
+    margin-right: 20px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+`
+
+const Boton = styled.div`
+    margin-top: 35px;
 `;
 
 export default function Footer(): JSX.Element {
@@ -39,6 +46,7 @@ export default function Footer(): JSX.Element {
         <Layout>
             <About>
                 <Titulo className="title">ACERCA DE NOSOTROS</Titulo>
+                <Imagen src={pictures[0]} alt="" />
                 <Contenido>
                     En 2021 estando en tiempos de pandemia aparentemente sin mucho que hacer decidimos elaborar brownies
                     que fueran echos con amor y que tuviera un verdadero sabor a Chocolate jalicience.
@@ -54,14 +62,14 @@ export default function Footer(): JSX.Element {
                 </Contenido>
                 <Contenido>
                     Seleccionamos cuidadosamente nuestras materias primas, lo que nos ha permitido posicionarnos con
-                    un excelente producto, acompañados de la fidelidad de todos nuestros clientes.
+                    un excelen
                 </Contenido>
-
-
-                <Lin to="/testimony">
-                    Testimonios &nbsp;
-                    <i className="right arrow icon"></i>
-                </Lin>
+                <Boton>
+                    <Linkeo to="/testimony">
+                        Testimonios &nbsp;
+                        <i className="right arrow icon"></i>
+                    </Linkeo>
+                </Boton>
             </About>
         </Layout>
     )
