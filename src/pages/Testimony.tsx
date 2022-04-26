@@ -22,9 +22,9 @@ export default function Footer(): JSX.Element {
                             <article className="post" key={p.id}>
                                 <h3>{p.name}</h3>
                                 <p>
-                                    <i className="quote left icon"></i>
-                                    {p.post} &nbsp;
-                                    <i className="quote right icon"></i>
+                                    <sup><i className="quote left icon"></i></sup>
+                                    {p.post}&nbsp;
+                                    <sup><i className="quote right icon"></i></sup>
                                 </p>
                             </article>
                         ))

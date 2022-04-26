@@ -35,6 +35,9 @@ const Imagen = styled.img`
     margin-right: 20px;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    @media only screen and (max-width: 400px) {
+        height: 170px;
+    }
 `
 
 const Boton = styled.div`

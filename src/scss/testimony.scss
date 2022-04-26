@@ -2,34 +2,19 @@
     width: 80%;
     margin: 30px auto;
     padding: 20px;
-    @media only screen and (max-width: 800px) {
-        width: 95%;
-    }
+    @media only screen and (max-width: 800px) { width: 95%; }
 
-    @media only screen and (max-width: 400px) {
-        width: 100%;
-    }
+    @media only screen and (max-width: 400px) { width: 100%; }
 
-    .post:not(.post:nth-child(1)) {
-        margin-top: 10px;
-    }
+    .post:not(.post:nth-child(1)) { margin-top: 13px; }
 
     .post {
-        background-color: $banner;
-        // background-color: lighten(black, 35%);
-        color: $brownie;
-        padding: 15px 20px;
-        border: 1px solid gainsboro;
-        border-radius: 4px;
-
-        p {
-            // color: darken(gainsboro, 40%);
-            white-space: pre-line;
-        }
+        padding-bottom: 7px;
+        border-bottom: 1px solid gainsboro;
 
         i {
             font-size: 10px;
-            color: $brownie;
+            color: lighten(black, 35%);
         }
     }
 }
