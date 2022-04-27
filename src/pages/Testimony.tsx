@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Layout from "../layout/Layout";
 import { Banner } from "../components/Banner";
 
@@ -9,6 +10,14 @@ const posts = [
 ]
 
 export default function Footer(): JSX.Element {
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }, [])
+
     return (
         <Layout>
             <section>
@@ -17,20 +26,40 @@ export default function Footer(): JSX.Element {
                     description="¿Tienes algún testimonio que contar? ¿Quieres decir algo al respecto de tu experiencia? ¿Reflexiones en voz alta? Éste es tu lugar. quejas o pensamientos de forma ingeniosa."
                 />
                 <div className="testimony">
-                    {
-                        posts.map(p => (
-                            <article className="post" key={p.id}>
-                                <h3>{p.name}</h3>
-                                <p>
-                                    <sup><i className="quote left icon"></i></sup>
-                                    {p.post}&nbsp;
-                                    <sup><i className="quote right icon"></i></sup>
-                                </p>
-                            </article>
-                        ))
-                    }
+                    <div className="testimony_give">
+                        <h3 className="ui brown ribbon label">Dejanos tu opini&oacute;n y/o experiencia</h3>
+                        {/* <h3>Dejanos tu opini&oacute;n y/o experiencia</h3> */}
+
+                        <form className="ui form">
+                            <div className="field">
+                                <label>Nombre</label>
+                                <input type="text" name="first-name" placeholder="Nombre" />
+                            </div>
+                            <div className="field">
+                                <label>Experiencia</label>
+                                <textarea placeholder="Experiencia"></textarea>
+                            </div>
+
+                            <button className="ui brownie button" type="button">Enviar</button>
+                        </form>
+                    </div>
+
+                    <div>
+                        {posts.map(p => (<Comments key={p.id} comment={p} />))}
+                    </div>
                 </div>
             </section>
         </Layout>
     );
 };
+
+const Comments = ({ comment }: any) => (
+    <article className="post">
+        <h3>{comment.name}</h3>
+        <p>
+            <sup><i className="quote left icon"></i></sup>
+            {comment.post} &nbsp;
+            <sup><i className="quote right icon"></i></sup>
+        </p>
+    </article>
+)

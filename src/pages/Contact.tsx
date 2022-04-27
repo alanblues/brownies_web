@@ -10,14 +10,20 @@ export default function Contact(): JSX.Element {
                     description="Llena el siguiente formulario para que te podamos contactar lo m&aacute;s
                     pronto posible"
                 />
-                <section className="form">
+                <section className="contact_form">
                     <h1 className="title">Contacto</h1>
 
-                    <form action="">
-                        <article>
-                            <label htmlFor="">Nombre</label>
-                            <input type="text" placeholder='Nombre completo' />
-                        </article>
+                    <form className="ui form">
+                        <div className="field">
+                            <label>Nombre</label>
+                            <input type="text" name="first-name" placeholder="Nombre" />
+                        </div>
+                        <div className="field">
+                            <label>Mensaje</label>
+                            <input type="text" name="first-name" placeholder="Nombre" />
+                        </div>
+
+                        <button className="ui brownie button" type="button">Enviar</button>
                     </form>
                 </section>
             </section>

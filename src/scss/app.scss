@@ -54,3 +54,19 @@ ul {
         }
     }
 }
+
+
+.form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .field {
+        label {
+            font-size: 16px;
+        }
+    }
+}
+
+.ui.brown.label {
+    background-color: lighten($brownie, 10%)!important;
+}

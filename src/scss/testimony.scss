@@ -17,4 +17,19 @@
             color: lighten(black, 35%);
         }
     }
+
+    &_give {
+        border: 1px solid gainsboro;
+        // margin: 15px 0 30px;
+        margin-bottom: 30px;
+        border-radius: 4px;
+        padding: 20px;
+        width: 60%;
+
+        .form  {
+            margin-top: 15px;
+        }
+
+        
+    }
 }
