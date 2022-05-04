@@ -8,6 +8,7 @@
 @import "./home.scss";
 @import "./menu.scss";
 @import "./testimony.scss";
+@import "./formulary.scss";
 
 @import "./home.mobile.scss";
 
@@ -41,7 +42,7 @@ ul {
         @media only screen and (max-width: 800px) {
             width: 95%;
         }
-    
+
         @media only screen and (max-width: 400px) {
             width: 100%;
         }
@@ -55,7 +56,6 @@ ul {
     }
 }
 
-
 .form {
     width: 100%;
     margin: 0;
@@ -68,5 +68,7 @@ ul {
 }
 
 .ui.brown.label {
-    background-color: lighten($brownie, 10%)!important;
+    background-color: lighten($brownie, 10%) !important;
 }
+
+textarea { resize: none!important; }

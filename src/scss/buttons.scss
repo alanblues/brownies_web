@@ -7,7 +7,8 @@ button.brownie {
     background-color: $bg_button!important;
     border-color: darken($bg_button, 5%);
     color: white!important;
-    &:hover {
-        background-color: $bg_button-hover!important;
-    }
+
+    &:hover { background-color: $bg_button-hover!important; }
 }
+
+button.rounded { border-radius: 20px!important; }

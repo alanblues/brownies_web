@@ -48,7 +48,7 @@ export default function Footer(): JSX.Element {
     return (
         <Layout>
             <About>
-                <Titulo className="title">ACERCA DE NOSOTROS</Titulo>
+                <Titulo className="title brownie">ACERCA DE NOSOTROS</Titulo>
                 <Imagen src={pictures[0]} alt="" />
                 <Contenido>
                     En 2021 estando en tiempos de pandemia aparentemente sin mucho que hacer decidimos elaborar brownies

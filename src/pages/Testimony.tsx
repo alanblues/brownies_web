@@ -1,6 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../layout/Layout";
 import { Banner } from "../components/Banner";
+import Formulary from '../components/Formulary';
 
 const posts = [
     { id: 1, name: 'Clim5', post: 'Gente, tenía que decir que la chica que me gusta se ha enfadado conmigo porque se ha enterado que también le tiro la caña a tres chicas más, y no entiendo por qué, ya que no le gusto, o eso parece. Le he explicado que es por diversificar esfuerzos y aumentar las posibilidades de éxito, y se ha cabreado aún más. ¿Alguien lo entiende? TQD' },
@@ -10,6 +11,7 @@ const posts = [
 ]
 
 export default function Footer(): JSX.Element {
+    const [nuevo, setNuevo] = useState<boolean>(false);
 
     useEffect(() => {
         window.scrollTo({
@@ -25,36 +27,31 @@ export default function Footer(): JSX.Element {
                     title="Testimonios"
                     description="¿Tienes algún testimonio que contar? ¿Quieres decir algo al respecto de tu experiencia? ¿Reflexiones en voz alta? Éste es tu lugar. quejas o pensamientos de forma ingeniosa."
                 />
-                <div className="testimony">
-                    <div className="testimony_give">
-                        <h3 className="ui brown ribbon label">Dejanos tu opini&oacute;n y/o experiencia</h3>
-                        {/* <h3>Dejanos tu opini&oacute;n y/o experiencia</h3> */}
+                <section className="testimony">
+                    <div className="testimony_new">
+                        {!nuevo
+                            ? <button
+                                className="ui brownie rounded button"
+                                type="button"
+                                onClick={() => setNuevo(!nuevo)}
+                            >Nuevo</button>
+                            : <Formulary title="Dejanos tu opini&oacute;n y/o experiencia" onSubmit={setNuevo} />
+                        }
 
-                        <form className="ui form">
-                            <div className="field">
-                                <label>Nombre</label>
-                                <input type="text" name="first-name" placeholder="Nombre" />
-                            </div>
-                            <div className="field">
-                                <label>Experiencia</label>
-                                <textarea placeholder="Experiencia"></textarea>
-                            </div>
 
-                            <button className="ui brownie button" type="button">Enviar</button>
-                        </form>
                     </div>
 
-                    <div>
+                    <div className="testimony_list">
                         {posts.map(p => (<Comments key={p.id} comment={p} />))}
                     </div>
-                </div>
+                </section>
             </section>
         </Layout>
     );
 };
 
-const Comments = ({ comment }: any) => (
-    <article className="post">
+const Comments = ({ comment }: any): JSX.Element => (
+    <article className="testimony_list-post">
         <h3>{comment.name}</h3>
         <p>
             <sup><i className="quote left icon"></i></sup>

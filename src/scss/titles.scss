@@ -4,18 +4,14 @@ h3, h4 {
     font-family: "Roboto", sans-serif;
 }
 
-h1.title {
-    color: $brownie;
+.title {
     border-bottom: 2px dashed $bottom_line;
     padding-bottom: 10px;
 }
-h1.brownie {
-    color: $brownie;
-    margin-bottom: 0px;
-}
+
+.brownie { color: $brownie; }
 
 p { font-size: 16px; }
-
 p.title {
     font-size: 20px;
     border-bottom: 2px dashed $bottom_line;
