@@ -1,8 +1,18 @@
 .home {
-    @extend %box_size;
-    flex-direction: column;
+    width: 80%;
+    margin: 15px auto;
+    padding: 20px;
+
+    @media only screen and (max-width: 800px) {
+        width: 95%;
+    }
+
+    @media only screen and (max-width: 400px) {
+        width: 100%;
+    }
+
+    
     text-align: center;
-    margin-top: 15px;
 
     article:nth-child(2) {
         margin-top: 50px;
