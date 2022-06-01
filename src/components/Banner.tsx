@@ -1,9 +1,6 @@
-interface Properties {
-    title: string;
-    description: string;
-}
+import { BannerProperties } from "../models";
 
-export const Banner = ({title, description}: Properties): JSX.Element => {
+export const Banner = ({title, description}: BannerProperties): JSX.Element => {
     return (
         <article className="banner">
             <div className="banner_info">

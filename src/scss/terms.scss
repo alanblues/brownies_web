@@ -1,0 +1,50 @@
+.terms {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 16px;
+
+    @media only screen and (max-width: 800px) {
+        width: 95%;
+    }
+
+    @media only screen and (max-width: 400px) {
+        width: 100%;
+    }
+
+    p,
+    li {
+        text-align: justify;
+    }
+    h3 {
+        display: flex;
+        justify-content: space-between;
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 3px;
+        color: lighten($brownie, 10%) !important;
+        //border: 1px solid $brownie_light;
+    }
+
+    &_definitions,
+    &_user {
+        margin-top: 20px;
+    }
+
+    ul {
+        // background-color: #eee;
+        // padding: 10px;
+        list-style: unset;
+        margin-left: 18px;
+        li:not(:first-child) {
+            margin-top: 12px;
+        }
+
+        li {
+            span {
+                font-weight: 700;
+                // text-shadow: 0px 0px 0px black;
+            }
+        }
+    }
+}

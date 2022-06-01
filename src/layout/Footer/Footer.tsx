@@ -18,7 +18,7 @@ export default function Footer(): JSX.Element {
             <ul>
               <li><a href="">Galer&iacute;a</a></li>
               <li><a href="">Zona de Entregas y Horarios</a></li>
-              <li><a href="">Términos y condiciones</a></li>
+              <li><Link to="/terms">T&eacute;rminos y condiciones</Link></li>
               <li><Link to="/testimony">Testimonios</Link></li>
             </ul>
           </div>

@@ -20,7 +20,7 @@ const Titulo = styled.h1`margin-bottom: 20px`;
 const Contenido = styled.p`text-align: justify;`;
 
 
-const Linkeo = styled(Link)`
+const Ir = styled(Link)`
     color: #64442e;
     font-size: 16px;
     &:hover {
@@ -68,10 +68,10 @@ export default function Footer(): JSX.Element {
                     un excelen
                 </Contenido>
                 <Boton>
-                    <Linkeo to="/testimony">
+                    <Ir to="/testimony">
                         Testimonios &nbsp;
                         <i className="right arrow icon"></i>
-                    </Linkeo>
+                    </Ir>
                 </Boton>
             </About>
         </Layout>
