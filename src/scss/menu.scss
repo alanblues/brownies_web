@@ -7,15 +7,6 @@ header {
         margin: 0 auto;
         padding: 30px 20px;
 
-        @media only screen and (max-width: 800px) {
-            width: 95%;
-        }
-    
-        @media only screen and (max-width: 400px) {
-            width: 100%;
-            padding: 20px;
-        }
-
         a:first-child { flex: 1; }
 
         a {
@@ -24,8 +15,21 @@ header {
             margin-right: 15px;
 
             &:hover { color: $menu-text-hover; }
-
             &.active { border-bottom: 1px solid $menu-text; }
         }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header .menu {
+        width: 95%;
+        a { font-size: 16px; }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    header .menu {
+        width: 100%;
+        padding: 15px;
     }
 }
