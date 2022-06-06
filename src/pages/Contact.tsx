@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Layout from '../layout/Layout';
 import { Banner } from '../components/Banner';
 import { CustomInput } from '../components/CustomInput';
@@ -10,7 +10,7 @@ export default function Contact(): JSX.Element {
     const [message, setMessage] = useState({ text: '', valid: null });
 
     const enableButton = (): boolean => {
-        if (isValidTexts(name, email) && message.text.trim() != '' ) {
+        if (isValidTexts(name, email) && message.text.trim() !== '' ) {
             return false;
         }
         return true;
@@ -25,10 +25,6 @@ export default function Contact(): JSX.Element {
         };
         console.log(body);
     }
-
-    useEffect(() => {
-        enableButton();
-    }, [])
 
     return (
         <Layout>
@@ -45,7 +41,7 @@ export default function Contact(): JSX.Element {
                             name="Nombre"
                             max={25}
                             tipe="text"
-                            placeHolder="Nombre o seudonimo"
+                            placeHolder="Nombre"
                             errorMsg="Favor de capturar nombre"
                             regExp={expressions.nombre}
                             state={name}

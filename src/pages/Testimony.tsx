@@ -57,7 +57,7 @@ const Formulario = (): JSX.Element => {
 
 
     const enableButton = (): boolean => {
-        if (isValidTexts(name) && experience.text.trim() != '') {
+        if (isValidTexts(name) && experience.text.trim() !== '') {
             return false;
         }
         return true;
@@ -72,10 +72,6 @@ const Formulario = (): JSX.Element => {
         console.log(body);
     }
 
-    useEffect(() => {
-        enableButton();
-    }, [])
-
     return (
         <form className="ui form" onSubmit={handleSubmit}>
             {/* <h3 className="brownie title">Contacto</h3> */}
@@ -83,7 +79,7 @@ const Formulario = (): JSX.Element => {
                 name="Nombre"
                 max={25}
                 tipe="text"
-                placeHolder="Nombre o seudonimo"
+                placeHolder="Nombre"
                 errorMsg="Favor de capturar nombre"
                 regExp={expressions.nombre}
                 state={name}
