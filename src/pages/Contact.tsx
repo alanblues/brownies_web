@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import Layout from '../layout/Layout';
-import { Banner } from '../components/Banner';
-import { CustomInput } from '../components/CustomInput';
-import { expressions, isValidTexts } from '../utilites/util';
+import Layout from 'src/layout/Layout'; 
+import { Banner } from 'src/components/Banner'; 
+import { CustomInput } from 'src/components/CustomInput'; 
+import { expressions, isValidTexts } from 'src/utilites/util';
 
 export default function Contact(): JSX.Element {
     const [name, setName] = useState({ text: '', valid: null });
     const [email, setEmail] = useState({ text: '', valid: null });
     const [message, setMessage] = useState({ text: '', valid: null });
+    const [loading, setLoading] = useState<boolean>(false);
 
     const enableButton = (): boolean => {
-        if (isValidTexts(name, email) && message.text.trim() !== '' ) {
+        if (isValidTexts(name, email) && message.text.trim() !== '') {
             return false;
         }
         return true;
@@ -18,12 +19,15 @@ export default function Contact(): JSX.Element {
 
     const handleSubmit = (e: any): void => {
         e.preventDefault();
-        const body = {
-            name: name.text.trim(),
-            email: email.text.trim(),
-            message: message.text.trim()
-        };
-        console.log(body);
+        setLoading(true);
+        setTimeout(() => {
+            const body = {
+                name: name.text.trim(),
+                email: email.text.trim(),
+                message: message.text.trim()
+            };
+            setLoading(false);
+        }, 3000);
     }
 
     return (
@@ -36,12 +40,12 @@ export default function Contact(): JSX.Element {
                 />
                 <div className="contact">
                     <form className="ui form" onSubmit={handleSubmit}>
-                        <h3 className="brownie title">Contacto</h3>
+                        <h2 className="brownie title">Contacto</h2>
                         <CustomInput
                             name="Nombre"
                             max={25}
                             tipe="text"
-                            placeHolder="Nombre"
+                            placeHolder="nombre"
                             errorMsg="Favor de capturar nombre"
                             regExp={expressions.nombre}
                             state={name}
@@ -51,22 +55,26 @@ export default function Contact(): JSX.Element {
                             name="Correo electr&oacute;nico"
                             max={30}
                             tipe="text"
-                            placeHolder="Correo electr&oacute;nico"
+                            placeHolder="correo electr&oacute;nico"
                             errorMsg="Favor de capturar correo electr&oacute;nico"
                             regExp={expressions.correo}
                             state={email}
                             changeState={setEmail}
                         />
-                          <CustomInput
-                            name="Correo electr&oacute;nico"
+                        <CustomInput
+                            name="Mensaje"
                             max={250}
                             tipe="textarea"
-                            placeHolder="Mensaje"
-                            errorMsg="Favor de capturar mensaje"
+                            placeHolder="mensaje"
                             state={message}
                             changeState={setMessage}
                         />
-                        <button className="ui brownie button" type="submit" disabled={enableButton()}>Enviar</button>
+                        <button type="submit"
+                            className={loading ? "ui button brownie loading": "ui button brownie"}
+                            disabled={enableButton()}
+                        >
+                            Enviar
+                        </button>
                     </form>
                 </div>
             </section>

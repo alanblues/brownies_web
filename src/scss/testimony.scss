@@ -1,13 +1,11 @@
 .testimony {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    @media only screen and (max-width: 800px) {
-        width: 95%;
-    }
+    @extend %size_screen;
 
     @media only screen and (max-width: 400px) {
-        width: 100%;
+        button {
+            padding: 8px !important;
+            width: 100%;
+        }
     }
 
     &_new {
@@ -17,7 +15,7 @@
         @media only screen and (max-width: 970px) {
             width: 70%;
         }
-    
+
         @media only screen and (max-width: 550px) {
             width: 100%;
         }
@@ -50,7 +48,8 @@
             &-title {
                 display: flex;
                 justify-content: space-between;
-                span { font-size: 13px;}
+
+                span { font-size: 13px; }
             }
         }
     }

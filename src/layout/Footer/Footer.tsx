@@ -17,7 +17,7 @@ export default function Footer(): JSX.Element {
             <h3>Con&oacute;cenos</h3>
             <ul>
               <li><a href="">Galer&iacute;a</a></li>
-              <li><a href="">Zona de Entregas y Horarios</a></li>
+              <li><Link to="/deliveries">Zona de Entregas y Horarios</Link></li>
               <li><Link to="/terms">T&eacute;rminos y condiciones</Link></li>
               <li><Link to="/testimony">Testimonios</Link></li>
             </ul>
@@ -26,7 +26,7 @@ export default function Footer(): JSX.Element {
           <div className="rem-17 mt-xs-30">
             <h3>Cont&aacute;ctanos</h3>
             <ul>
-              <li><a href="mailto:dev.alanparra@gmail.com?subject=brownies">the.brownies@gmail.com</a></li>
+              <li><a href="mailto:postres_na@larson.com?subject=brownies">postres@larson.com</a></li>
               <li><a href="tel:3317460383">3331988787</a></li>
             </ul>
           </div>
@@ -36,7 +36,7 @@ export default function Footer(): JSX.Element {
       <section className="footer_social">
         <a href="#"><i className="facebook f circular large icon brown"></i></a>
         <a href="#"><i className="instagram circular large icon brown"></i></a>
-        <a href=""><i className="whatsapp circular large icon brown"></i></a>
+        <a onClick={handleWhatsapp} title="Envianos un WhatsApp"><i className="whatsapp circular large icon brown"></i></a>
       </section>
     </footer>
   );

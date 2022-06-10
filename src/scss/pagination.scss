@@ -1,0 +1,19 @@
+.pagination {
+    margin-top: 10px;
+    &_page {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 5px;
+        @media only screen and (max-width: 400px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &_buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 5px;
+    }
+}

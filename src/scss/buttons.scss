@@ -9,6 +9,7 @@ button.brownie {
     color: white!important;
 
     &:hover { background-color: $bg_button-hover!important; }
+    // &:active { background-color: red!important; }
 }
 
 button.rounded { border-radius: 20px!important; }

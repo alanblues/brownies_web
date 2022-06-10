@@ -8,6 +8,13 @@ export const isValidTexts = (...params: Array<IInputs>): boolean => {
     return isValid;
 }
 
+export const scrollUp = (): void => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+}
+
 export const expressions = {
     usuario: /^[a-zA-Z0-9\_\-]{3,16}$/, // Letras, numeros, guion y guion_bajo
     nombre: /^[a-zA-ZÀ-ÿ\s]{3,25}$/, // Letras y espacios, pueden llevar acentos.

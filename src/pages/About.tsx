@@ -1,28 +1,27 @@
 import { Link } from "react-router-dom";
-import Layout from "../layout/Layout";
+import Layout from "src/layout/Layout";
 import styled from "styled-components";
-import { pictures } from "../utilites/images";
+import { pictures } from "src/utilites/images";
 
-const About = styled.section`
+const Acercade = styled.section`
     width: 80%;
     margin: 15px auto;
     padding: 20px;
-    @media only screen and (max-width: 800px) {
-        width: 95%;
-    }
+
+    @media only screen and (max-width: 800px) { width: 95%; }
     @media only screen and (max-width: 400px) {
         width: 100%;
+        padding: 15px;
     }
 `;
 
-const Titulo = styled.h1`margin-bottom: 20px`;
+const Titulo = styled.h2`margin-bottom: 20px`;
 
 const Contenido = styled.p`text-align: justify;`;
 
-
 const Ir = styled(Link)`
     color: #64442e;
-    font-size: 16px;
+    font-size: 15px;
     &:hover {
         color: #64442e;
         border-bottom: 1px solid #64442e;
@@ -39,16 +38,13 @@ const Imagen = styled.img`
         height: 170px;
     }
 `
-
-const Boton = styled.div`
-    margin-top: 35px;
-`;
+const Boton = styled.div`margin-top: 35px;`;
 
 export default function Footer(): JSX.Element {
     return (
         <Layout>
-            <About>
-                <Titulo className="title brownie">ACERCA DE NOSOTROS</Titulo>
+            <Acercade>
+                <Titulo className="title brownie">Acerca de Nosotros</Titulo>
                 <Imagen src={pictures[0]} alt="" />
                 <Contenido>
                     En 2021 estando en tiempos de pandemia aparentemente sin mucho que hacer decidimos elaborar brownies
@@ -73,7 +69,7 @@ export default function Footer(): JSX.Element {
                         <i className="right arrow icon"></i>
                     </Ir>
                 </Boton>
-            </About>
+            </Acercade>
         </Layout>
     )
 }

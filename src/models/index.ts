@@ -3,7 +3,7 @@ export interface InputsTypes {
     max?: number;
     tipe: string;
     placeHolder: string;
-    errorMsg: string;
+    errorMsg?: string;
     regExp?: RegExp;
     state: any;
     changeState: any;

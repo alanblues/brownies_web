@@ -1,5 +1,7 @@
-import Layout from "../layout/Layout"
-import { useTerms } from "../hooks/useTerms";
+import { useEffect } from "react";
+import Layout from "src/layout/Layout"; 
+import { useTerms } from "src/hooks/useTerms";
+import { scrollUp } from "src/utilites/util";
 
 export default function Contact(): JSX.Element {
     const {
@@ -9,14 +11,16 @@ export default function Contact(): JSX.Element {
         toggleAcordion
     } = useTerms();
 
+    useEffect(()=> { scrollUp(); }, [])
+
     return (
         <Layout>
             <section className="terms">
                 <article className="terms_conditions">
                     <h3 onClick={() => toggleAcordion('terms')}>
-                        Términos y Condiciones de los Sitios de Brownies-Commerce.
+                        Términos y condiciones de los sitios
                         <a>
-                            <i className={`chevron ${toggleTerms.icon} small icon brown`}></i>
+                            <i className={`chevron ${toggleTerms.icon} small icon`}></i>
                         </a>
                     </h3>
                     <div style={{ display: toggleTerms.display }}>
@@ -42,7 +46,7 @@ export default function Contact(): JSX.Element {
                     <h3>
                         Definiciones
                         <a onClick={() => toggleAcordion('definitions')}>
-                            <i className={`chevron ${toggleDefinitions.icon} small icon brown`}></i>
+                            <i className={`chevron ${toggleDefinitions.icon} small icon`}></i>
                         </a>
                     </h3>
                     <ul style={{ display: toggleDefinitions.display }}>
@@ -88,9 +92,9 @@ export default function Contact(): JSX.Element {
 
                 <article className="terms_user">
                     <h3>
-                        Deberes de los Usuarios
+                        Deberes de los usuarios
                         <a onClick={() => toggleAcordion('user')}>
-                        <i className={`chevron ${toggleUser.icon} small icon brown`}></i>
+                            <i className={`chevron ${toggleUser.icon} small icon`}></i>
                         </a>
                     </h3>
                     <ul style={{ display: toggleUser.display }}>

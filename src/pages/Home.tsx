@@ -1,5 +1,5 @@
-import Layout from "../layout/Layout";
-import { icons, pictures } from "../utilites/images";
+import Layout from "src/layout/Layout"; 
+import { icons, pictures } from "src/utilites/images";
 
 export default function Home(): JSX.Element {
     return (
