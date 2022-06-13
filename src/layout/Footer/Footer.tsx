@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-
-const whatsAppMsg =
-  "Hola te contacto desde el sitio web para pedir información acerca de las ventas de brownies";
+import { whatsAppMsg } from "src/utilites/images";
 
 export default function Footer(): JSX.Element {
   const handleWhatsapp = () => {
@@ -13,7 +11,7 @@ export default function Footer(): JSX.Element {
     <footer>
       <section className="footer">
         <div className="footer_content">
-          <div className="rem-16">
+          <div>
             <h3>Con&oacute;cenos</h3>
             <ul>
               <li><a href="">Galer&iacute;a</a></li>
@@ -23,7 +21,7 @@ export default function Footer(): JSX.Element {
             </ul>
           </div>
 
-          <div className="rem-17 mt-xs-30">
+          <div>
             <h3>Cont&aacute;ctanos</h3>
             <ul>
               <li><a href="mailto:postres_na@larson.com?subject=brownies">postres@larson.com</a></li>

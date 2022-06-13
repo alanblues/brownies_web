@@ -2,8 +2,9 @@ body,
 h2,
 h3, h4 {
     font-family: "Roboto", sans-serif;
+    color: darken(#333, 10%);
+    color: #333;
 }
-
 
 .brownie {
     color: $brownie;
@@ -19,7 +20,6 @@ p {
 }
 
 p.title {
-    // font-size: 19px;
     border-bottom: 2px dashed $bottom_line;
     padding-bottom: 10px;
     margin-bottom: 8px;

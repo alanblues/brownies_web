@@ -22,7 +22,7 @@ export default function Delivery(): JSX.Element {
                     {
                         entregas.map(e => (
                             <article key={e.id}>
-                                <i className="map marker alternate icon large"></i>
+                                <i className="map marker alternate orange icon large"></i>
                                 <div className="delivery_places-addr">
                                     <h3>{e.lugar}</h3>
                                     <span>{e.direccion}</span>

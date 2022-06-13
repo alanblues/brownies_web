@@ -1,9 +1,8 @@
 .terms {
     @extend %size_screen;
-
+    color: #333;
     p, ul, li {
         text-align: justify;
-        // color: #424949;
         font-size: 15px;
     }
 
@@ -13,7 +12,9 @@
         background-color: #eee;
         padding: 10px;
         border-radius: 3px;
-        color: darken($brownie, 8%)!important;
+        color: darken(#333, 10%);
+
+        a i { color: darken(#333, 10%); }
     }
 
     &_definitions,
@@ -26,6 +27,9 @@
             margin-top: 12px;
         }
 
-        li span { font-weight: 700; }
+        li span {
+            font-weight: 700;
+            color: darken(#333, 10%);
+        }
     }
 }

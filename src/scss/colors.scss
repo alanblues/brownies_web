@@ -1,18 +1,20 @@
 $brownie: #64442e;
 $brownie_light: lighten(#64442e, 40%);
+$text_title: darken(#333, 10%);
 
-// Menu
-$menu-text: #fefacd;
-$menu-text-hover: #c8b804;
+// * Menu
+$menu_text: #fefacd;
+$menu_text_hover: #c8b804;
 
-// Footer
-$footer-text: #bfbfbf;
+// * Footer
+$footer_text: #bfbfbf;
+$footer_text-hover: #fff;
 
 $banner: #eee;
 $h3: rgb(255, 255, 255);
 
 $bottom_line: #875c3e;
 
-// Buttons
+// * Buttons
 $bg_button: #755036;
 $bg_button-hover: #80573b;

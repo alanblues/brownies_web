@@ -1,7 +1,6 @@
 @import "./colors.scss";
 @import "./extends.scss";
 @import "./titles.scss";
-
 @import "./buttons.scss";
 @import "./home.scss";
 @import "./contact.scss";
@@ -20,17 +19,8 @@
     box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
-
 ul {
     list-style: none;
-}
-
-.rem-16 {
-    width: 16rem;
 }
 
 .banner {

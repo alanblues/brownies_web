@@ -7,14 +7,17 @@ footer { margin-top: 30px; }
         @extend %box_size;
         justify-content: flex-start;
 
+
+        div:nth-child(1) { width: 17rem; }
+
         h3 { color: $h3; }
 
         ul li:not(:first-child) { margin-top: 4px; }
 
         a {
-            color: $footer-text;
+            color: $footer_text;
             font-size: 15px;
-            &:hover { color: #fff !important; }
+            &:hover { color: $footer_text-hover; }
         }
     }
 }
@@ -39,7 +42,11 @@ footer { margin-top: 30px; }
 }
 
 @media only screen and (max-width: 470px) {
-    .footer_content { flex-direction: column; }
+    .footer_content {
+        flex-direction: column;
 
-    .mt-xs-30 { margin-top: 30px; }
+        div:nth-child(2) {
+            margin-top: 30px;
+        }
+    }
 }

@@ -41,3 +41,6 @@ export const entregas = [
     { id: 3, lugar: 'La Gran Plaza', direccion: 'Av. Ignacio L. Vallarta 3959', horario: '05:00 pm - 08:30 pm' },
     { id: 4, lugar: 'Plaza Fórum', direccion: 'Blvd. Gral. M García Barragán 2077', colonia: 'Prados del Nilo', horario: '05:00 pm - 08:30 pm' }
 ]
+
+export const whatsAppMsg =
+  "Hola te contacto desde el sitio web para pedir información acerca de las ventas de brownies";
