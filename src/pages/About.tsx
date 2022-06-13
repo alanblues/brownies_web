@@ -5,11 +5,11 @@ import { pictures } from "src/utilites/images";
 
 const Acercade = styled.section`
     width: 80%;
-    margin: 15px auto;
+    margin: 0 auto;
     padding: 20px;
 
     @media only screen and (max-width: 800px) { width: 95%; }
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 420px) {
         width: 100%;
         padding: 15px;
     }
