@@ -18,8 +18,8 @@ export const Pagination = (props: any): JSX.Element => {
     const disabledPreviousButton = (): boolean => currentPage === 1;
     const disabledNextButton = (): boolean => currentPage === maxPages;
 
-    const handlePagination = (go: string): void => {
-        switch (go) {
+    const handlePagination = (goTo: string): void => {
+        switch (goTo) {
             case 'first':
                 setCurrentPage(1);
                 break;

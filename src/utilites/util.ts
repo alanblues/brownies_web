@@ -9,8 +9,9 @@ export const isValidTexts = (...params: Array<IInputs>): boolean => {
 }
 
 export const scrollUp = (): void => {
-    window.scrollTo({
+     window.scrollTo({
         top: 0,
+        left: 0,
         behavior: 'smooth',
     });
 }

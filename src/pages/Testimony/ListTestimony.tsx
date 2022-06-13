@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Pagination } from "src/components/Pagination"
 import { posts } from "src/utilites/images"
+import { scrollUp } from 'src/utilites/util';
 
 export const ListTestimony = (): JSX.Element => {
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [perPage] = useState<number>(3);
+
+    const onNewPage = (newPage: number): void => {
+        scrollUp();
+        setCurrentPage(newPage);
+    }
+
+    useEffect(()=> { scrollUp(); }, [])
 
     return (
         <>
@@ -20,7 +28,7 @@ export const ListTestimony = (): JSX.Element => {
             </div>
             <Pagination
                 currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
+                setCurrentPage={onNewPage}
                 totaltems={posts.length}
                 perPage={perPage}
             />

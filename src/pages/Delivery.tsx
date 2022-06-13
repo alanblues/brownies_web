@@ -1,10 +1,15 @@
+import { useEffect } from "react";
 import Layout from "src/layout/Layout";
 import { Link } from "react-router-dom";
 import { entregas } from "src/utilites/images";
+import { scrollUp } from "src/utilites/util";
 //https://nicepage.com/es/ht/17580/caminos-duros-de-industiral-plantilla-html
 
 
 export default function Delivery(): JSX.Element {
+
+    useEffect(()=> { scrollUp(); }, [])
+
     return (
         <Layout>
 
@@ -22,7 +27,7 @@ export default function Delivery(): JSX.Element {
                     {
                         entregas.map(e => (
                             <article key={e.id}>
-                                <i className="map marker alternate orange icon large"></i>
+                                <i className="map marker alternate icon large"></i>
                                 <div className="delivery_places-addr">
                                     <h3>{e.lugar}</h3>
                                     <span>{e.direccion}</span>

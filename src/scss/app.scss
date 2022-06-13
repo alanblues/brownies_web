@@ -46,13 +46,9 @@ ul {
             color: black;
             font-size: 22px;
             font-weight: normal;
-            margin-bottom: 3px;
+            margin-bottom: 10px;
         }
     }
-}
-
-.ui.brown.label {
-    background-color: lighten($brownie, 10%) !important;
 }
 
 textarea { resize: none!important; }

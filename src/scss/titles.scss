@@ -2,7 +2,6 @@ body,
 h2,
 h3, h4 {
     font-family: "Roboto", sans-serif;
-    color: darken(#333, 10%);
     color: #333;
 }
 
@@ -12,7 +11,7 @@ h3, h4 {
 
 .title {
     border-bottom: 2px dashed $bottom_line;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 p {
@@ -24,15 +23,3 @@ p.title {
     padding-bottom: 10px;
     margin-bottom: 8px;
 }
-
-// @media only screen and (max-width: 500px) {
-//     h1 {
-//         font-size: 22px;
-//     }
-//     p {
-//         font-size: 14px;
-//     }
-//     p.title {
-//         font-size: 16px;
-//     }
-// }

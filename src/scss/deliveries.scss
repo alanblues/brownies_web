@@ -5,7 +5,6 @@
 
     border: 1px solid gainsboro;
     font-size: 16px;
-    //color: #424949;
 
     &_title {
         text-align: center; }
@@ -24,7 +23,10 @@
                 font-size: 16px;
             }
 
-            i { font-size: 30px!important; }
+            i {
+                font-size: 30px!important;
+                color: #e59866!important;
+            }
         }
 
         &-addr {
