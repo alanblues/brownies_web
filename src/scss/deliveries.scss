@@ -1,12 +1,14 @@
 .delivery {
-    @extend %size_screen;
+    width: 76%;
+    margin: 15px auto;
+    padding: 20px;
+
     border: 1px solid gainsboro;
     font-size: 16px;
     //color: #424949;
 
     &_title {
-        text-align: center;
-    }
+        text-align: center; }
 
     &_places {
         display: grid;
@@ -31,21 +33,19 @@
             margin-left: 8px;
 
             h4 { margin-bottom: 8px; }
-            span {
-                font-size: 15px;
-            }
+            span { font-size: 15px; }
         }
     }
 }
 
+@media only screen and (max-width: 800px) {
+    .delivery { width: 90%; }
+}
+
 @media only screen and (max-width: 850px) {
-    .delivery_places {
-        grid-template-columns: 1fr 1fr;
-    }
+    .delivery_places { grid-template-columns: 1fr 1fr; }
 }
 
 @media only screen and (max-width: 550px) {
-    .delivery_places {
-        grid-template-columns: 1fr;
-    }
+    .delivery_places { grid-template-columns: 1fr; }
 }

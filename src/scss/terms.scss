@@ -1,7 +1,8 @@
 .terms {
     @extend %size_screen;
     color: #333;
-    p, ul, li {
+
+    p, ul, li, h3 {
         text-align: justify;
         font-size: 15px;
     }
