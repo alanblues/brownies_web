@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Layout from "src/layout/Layout"; 
 import { useTerms } from "src/hooks/useTerms";
-import { scrollUp } from "src/utilites/util";
+import { scrollUp } from "src/utilites/validations";
 
 export default function Contact(): JSX.Element {
     const {

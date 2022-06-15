@@ -13,13 +13,9 @@
         width: 50%;
         margin-bottom: 15px;
 
-        @media only screen and (max-width: 970px) {
-            width: 70%;
-        }
+        @media only screen and (max-width: 970px) { width: 70%; }
 
-        @media only screen and (max-width: 550px) {
-            width: 100%;
-        }
+        @media only screen and (max-width: 550px) { width: 100%; }
     }
 
     &_list {
@@ -27,13 +23,9 @@
         border-radius: 4px;
         padding: 12px;
 
-        &-post:not(&-post:nth-child(1)) {
-            margin-top: 10px;
-        }
+        &-post:not(&-post:nth-child(1)) { margin-top: 10px; }
 
-        &-post:not(:last-child) {
-            border-bottom: 1px solid gainsboro;
-        }
+        &-post:not(:last-child) { border-bottom: 1px solid gainsboro; }
 
         &-post {
             padding-bottom: 7px;

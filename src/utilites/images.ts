@@ -28,18 +28,12 @@ export const posts = [
     { id: 11, name: '11 eleven anclas', post: 'Hoy, y desde hace una semana, decidimos acoger a una compañera de piso coreana, parecía muy maja y tranquila. Se pasa el día bebiendo sake en el salón y cantando en coreano. Es alcohólica y gritona. ADV' }
 ]
 
-export const entregass = [
-    { id: 1, lugar: 'Torre Chapultepec', direccion: 'Av. Chapultepec 15', calles: 'Av Hidalgo y Morelos', horario: '05:00 pm - 10:00 pm' },
-    { id: 2, lugar: 'Plaza Terraza Oblatos', direccion: 'Av. Circunvalación Oblatos 2700', horario: '05:00 pm - -09:00 pm' },
-    { id: 3, lugar: 'La Gran Plaza', direccion: 'Av. Ignacio L. Vallarta 3959', horario: '05:00 pm - 08:30 pm' },
-    { id: 4, lugar: 'Plaza Fórum', direccion: 'Blvd. Gral. M García Barragán 2077, Prados del Nilo, ', horario: '05:00 pm - 08:30 pm' }
-]
 
 export const entregas = [
-    { id: 1, lugar: 'Torre Chapultepec', direccion: 'Av. Chapultepec 15', calles: 'Av Hidalgo y Morelos', horario: '05:00 pm - 10:00 pm' },
-    { id: 2, lugar: 'Plaza Terraza Oblatos', direccion: 'Av. Circunvalación Oblatos 2700', horario: '05:00 pm - -09:00 pm' },
-    { id: 3, lugar: 'La Gran Plaza', direccion: 'Av. Ignacio L. Vallarta 3959', horario: '05:00 pm - 08:30 pm' },
-    { id: 4, lugar: 'Plaza Fórum', direccion: 'Blvd. Gral. M García Barragán 2077', colonia: 'Prados del Nilo', horario: '05:00 pm - 08:30 pm' }
+    { id: 1, lugar: 'Torre Chapultepec', map: 'chapu', direccion: 'Av. Chapultepec 15', calles: 'Av Hidalgo y Morelos', horario: '05:00 pm - 10:00 pm' },
+    { id: 2, lugar: 'Plaza Terraza Oblatos', map: 'oblatos', direccion: 'Av. Circunvalación Oblatos 2700', horario: '05:00 pm - -09:00 pm' },
+    { id: 3, lugar: 'La Gran Plaza', map: 'granplaza', direccion: 'Av. Ignacio L. Vallarta 3959', horario: '05:00 pm - 08:30 pm' },
+    { id: 4, lugar: 'Plaza Fórum', map: 'forum', direccion: 'Blvd. Gral. M García Barragán 2077', colonia: 'Prados del Nilo', horario: '05:00 pm - 08:30 pm' }
 ]
 
 export const whatsAppMsg =

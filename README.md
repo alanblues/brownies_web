@@ -2,6 +2,11 @@
 yarn add react-router-dom --save
 npm install react-router-dom --save
 yarn add sass --save
+node: v16.14.2
+
+# Ayudas
+https://www.youtube.com/watch?v=W4bWAKeNCdM
+https://www.youtube.com/watch?v=uA4AVdl6wXY
 
 
 ### `npm test`

@@ -3,7 +3,7 @@ import Layout from "src/layout/Layout";
 import { Banner } from "src/components/Banner"; 
 import { NewTestimony } from "./NewTestimony";
 import { ListTestimony } from "./ListTestimony";
-import { scrollUp } from "src/utilites/util";
+import { scrollUp } from "src/utilites/validations";
 
 export default function Footer(): JSX.Element {
     const [nuevo, setNuevo] = useState<boolean>(false);

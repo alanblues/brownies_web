@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { expressions, isValidTexts } from 'src/utilites/util';
+import { expressions, isValidTexts } from 'src/utilites/validations';
 import { CustomInput } from 'src/components/CustomInput';
 
 export const NewTestimony = (): JSX.Element => {

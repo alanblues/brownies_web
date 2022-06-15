@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Pagination } from "src/components/Pagination"
 import { posts } from "src/utilites/images"
-import { scrollUp } from 'src/utilites/util';
+import { scrollUp } from 'src/utilites/validations';
 
 export const ListTestimony = (): JSX.Element => {
     const [currentPage, setCurrentPage] = useState<number>(1);

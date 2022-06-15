@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Layout from 'src/layout/Layout'; 
 import { Banner } from 'src/components/Banner'; 
 import { CustomInput } from 'src/components/CustomInput'; 
-import { expressions, isValidTexts } from 'src/utilites/util';
+import { expressions, isValidTexts } from 'src/utilites/validations';
 
 export default function Contact(): JSX.Element {
     const [name, setName] = useState({ text: '', valid: null });
