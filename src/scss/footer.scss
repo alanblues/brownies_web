@@ -5,29 +5,57 @@
         @extend %box_size;
         justify-content: flex-start;
 
+        div:nth-child(1) {
+            width: 17rem;
+        }
 
-        div:nth-child(1) { width: 17rem; }
+        h3 {
+            color: $h3;
+        }
 
-        h3 { color: $h3; }
-
-        ul li:not(:first-child) { margin-top: 4px; }
+        ul li:not(:first-child) {
+            margin-top: 4px;
+        }
 
         a {
             color: $footer_text;
             font-size: 15px;
-            &:hover { color: $footer_text-hover; }
+            &:hover {
+                color: $footer_text-hover;
+            }
         }
     }
 }
 
 .footer_social {
     @extend %box_size;
-
-    i.facebook.icon:hover { color: #4267b2 !important; }
-
-    i.instagram.icon:hover { color: #3f729b !important; }
-
-    i.whatsapp.icon:hover { color: #25d366 !important; }
+    i.facebook {
+        transition-duration: 0.5s;
+        &:hover {
+            color: #4267b2 !important;
+            // &.circular {
+            //     box-shadow: 0 0 0 0.1em #4267b2 inset;
+            // }
+        }
+    }
+    i.instagram {
+        transition-duration: 0.5s;
+        &:hover {
+            color: #3f729b !important;
+            // &.circular {
+            //     box-shadow: 0 0 0 0.1em #3f729b inset;
+            // }
+        }
+    }
+    i.whatsapp {
+        transition-duration: 0.5s;
+        &:hover {
+            color: #25d366 !important;
+            // &.circular {
+            //     box-shadow: 0 0 0 0.1em #25d366 inset;
+            // }
+        }
+    }
 }
 
 .footer_copyright {
@@ -36,15 +64,21 @@
     color: $brownie;
     font-weight: normal;
 
-    &:hover { border-bottom: 1px solid $brownie; }
+    &:hover {
+        border-bottom: 1px solid $brownie;
+    }
 }
 
 @media only screen and (max-width: 470px) {
     .footer_content {
         flex-direction: column;
 
-        div:nth-child(2) { margin-top: 30px; }
+        div:nth-child(2) {
+            margin-top: 30px;
+        }
 
-        a { font-size: 16px;}
+        a {
+            font-size: 16px;
+        }
     }
 }

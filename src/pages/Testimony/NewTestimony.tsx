@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { expressions, isValidTexts } from 'src/utilites/validations';
 import { CustomInput } from 'src/components/CustomInput';
 
-export const NewTestimony = (): JSX.Element => {
+export const NewTestimony = (props: any): JSX.Element => {
     const [name, setName] = useState({ text: '', valid: null });
     const [experience, setExperience] = useState({ text: '', valid: null });
 
@@ -20,12 +20,12 @@ export const NewTestimony = (): JSX.Element => {
             name: name.text.trim(),
             experience: experience.text.trim()
         };
+        props.hideNewTestimony();
         console.log(body);
     }
 
     return (
         <form className="ui form" onSubmit={handleSubmit}>
-            {/* <h3 className="brownie title">Contacto</h3> */}
             <CustomInput
                 name="Nombre"
                 max={25}

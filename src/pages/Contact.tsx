@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Layout from 'src/layout/Layout'; 
-import { Banner } from 'src/components/Banner'; 
-import { CustomInput } from 'src/components/CustomInput'; 
+import Layout from 'src/layout/Layout';
+import { Banner } from 'src/components/Banner';
+import { CustomInput } from 'src/components/CustomInput';
 import { expressions, isValidTexts } from 'src/utilites/validations';
+import { sendEmail } from 'src/providers/contact.service';
 
 export default function Contact(): JSX.Element {
     const [name, setName] = useState({ text: '', valid: null });
@@ -17,17 +18,19 @@ export default function Contact(): JSX.Element {
         return true;
     };
 
-    const handleSubmit = (e: any): void => {
+    const handleSubmit = async (e: any) => {
         e.preventDefault();
         setLoading(true);
-        setTimeout(() => {
-            const body = {
-                name: name.text.trim(),
-                email: email.text.trim(),
-                message: message.text.trim()
-            };
-            setLoading(false);
-        }, 3000);
+
+        const dataContact = {
+            name: name.text.trim(),
+            email: email.text.trim(),
+            message: message.text.trim()
+        };
+        // const res = await sendEmail(dataContact);
+        // console.log(res);
+        console.log(dataContact);
+        setLoading(false);
     }
 
     return (
@@ -38,6 +41,7 @@ export default function Contact(): JSX.Element {
                     description="Llena el siguiente formulario para que te podamos contactar lo m&aacute;s
                     pronto posible"
                 />
+                {/* <div dangerouslySetInnerHTML={{__html: "<p style='color:red'>mensaje</p>"}}></div> */}
                 <div className="contact">
                     <form className="ui form" onSubmit={handleSubmit}>
                         <h2 className="brownie title">Contacto</h2>
@@ -70,7 +74,7 @@ export default function Contact(): JSX.Element {
                             changeState={setMessage}
                         />
                         <button type="submit"
-                            className={loading ? "ui button brownie loading": "ui button brownie"}
+                            className={loading ? "ui button brownie loading" : "ui button brownie"}
                             disabled={enableButton()}
                         >
                             Enviar

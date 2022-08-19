@@ -1,5 +1,6 @@
-import Layout from "src/layout/Layout"; 
-import { icons, pictures } from "src/utilites/images";
+
+import Layout from "src/layout/Layout";
+import { icons, brownies } from "src/utilites/images";
 
 export default function Home(): JSX.Element {
     return (
@@ -21,7 +22,7 @@ export default function Home(): JSX.Element {
                     <p className="title">Opciones para todos los gustos</p>
 
                     <div className="home_icons">
-                        {pictures.map((x, index) => (
+                        {brownies.map((x, index) => (
                             <img key={index} className="icon border" src={x} />
                         ))}
                     </div>

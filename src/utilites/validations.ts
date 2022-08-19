@@ -34,7 +34,7 @@ export const openMap = (addr: string): void => {
             window.open('https://www.google.com/maps/search/?api=1&query=Gran+Terraza+Oblatos,+Avenida+Circunvalación+Oblatos,+Oblatos,+Guadalajara,+Jalisco', "_blank");
             break;
         case 'granplaza':
-            window.open('https://www.google.com/maps/search/?api=1&query=Torre+Chapultepec,+Av.+Chapultepec+Nte.+15,+44600+Guadalajara,+Jal.', "_blank");
+            window.open('https://www.google.com/maps/search/?api=1&query=La+Gran+Plaza,+45049+Zapopan,+Jal.', "_blank");
             break;
         case 'forum':
             window.open('https://www.google.com/maps/search/?api=1&query=Forum+Tlaquepaque,+Boulevard+General+Marcelino+García+Barragán,+Prados+del+Nilo,+Guadalajara,+Jalisco', "_blank");

@@ -43,9 +43,9 @@ export default function Contact(): JSX.Element {
                 </article>
 
                 <article className="terms_definitions">
-                    <h3>
+                    <h3 onClick={() => toggleAcordion('definitions')}>
                         Definiciones
-                        <a onClick={() => toggleAcordion('definitions')}>
+                        <a>
                             <i className={`chevron ${toggleDefinitions.icon} small icon`}></i>
                         </a>
                     </h3>
@@ -91,15 +91,15 @@ export default function Contact(): JSX.Element {
                 </article>
 
                 <article className="terms_user">
-                    <h3>
+                    <h3 onClick={() => toggleAcordion('user')}>
                         Deberes de los usuarios
-                        <a onClick={() => toggleAcordion('user')}>
+                        <a>
                             <i className={`chevron ${toggleUser.icon} small icon`}></i>
                         </a>
                     </h3>
                     <ul style={{ display: toggleUser.display }}>
                         <li>Suministrar información veraz y fidedigna al momento de crear su Cuenta de Usuario;</li>
-                        <li> Hacer un uso responsable y correcto del Sitio E-commerce. </li>
+                        <li>Hacer un uso responsable y correcto del Sitio E-commerce. </li>
                         <li>Abstenerse de utilizar el Sitio E-commerce para realizar actos contrarios a la ley, especialmente aquellos relacionados con el derecho de propiedad intelectual de terceros.</li>
                         <li>Pagar oportunamente a las Empresas por los productos adquiridos o a los Repartidores por la prestación del servicio de domicilio.</li>
                         <li>Informar a la Empresa cualquier usurpación o suplantación de identidad o de los datos de validación.</li>

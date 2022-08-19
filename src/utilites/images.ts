@@ -5,7 +5,7 @@ export const icons = [
     { img: 'https://thechocolatebrownie.com/wp-content/uploads/2020/07/postre-03.jpg', title: 'postre' }
 ];
 
-export const pictures = [
+export const brownies = [
     "assets/img/chrismas.jpeg",
     "assets/img/torre.jpeg",
     "assets/img/label.jpeg",
@@ -31,10 +31,11 @@ export const posts = [
 
 export const entregas = [
     { id: 1, lugar: 'Torre Chapultepec', map: 'chapu', direccion: 'Av. Chapultepec 15', calles: 'Av Hidalgo y Morelos', horario: '05:00 pm - 10:00 pm' },
-    { id: 2, lugar: 'Plaza Terraza Oblatos', map: 'oblatos', direccion: 'Av. Circunvalación Oblatos 2700', horario: '05:00 pm - -09:00 pm' },
+    { id: 2, lugar: 'Plaza Terraza Oblatos', map: 'oblatos', direccion: 'Av. Circunvalación Oblatos 2700', horario: '05:00 pm - 09:00 pm' },
     { id: 3, lugar: 'La Gran Plaza', map: 'granplaza', direccion: 'Av. Ignacio L. Vallarta 3959', horario: '05:00 pm - 08:30 pm' },
     { id: 4, lugar: 'Plaza Fórum', map: 'forum', direccion: 'Blvd. Gral. M García Barragán 2077', colonia: 'Prados del Nilo', horario: '05:00 pm - 08:30 pm' }
+
+    // { id: 1, map: 'chapu', title: 'Plaza Terraza Oblatos', street: 'Av. Circunvalación Oblatos', num: '2700', col: 'Oblatos', cp: '44716', schedule: '05:00 pm - 10:00 pm' },
 ]
 
-export const whatsAppMsg =
-  "Hola te contacto desde el sitio web para pedir información acerca de las ventas de brownies";
+export const whatsAppMsg = "Hola te contacto desde el sitio web para pedir información acerca de las ventas de brownies";

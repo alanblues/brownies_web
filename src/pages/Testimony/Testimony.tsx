@@ -6,7 +6,7 @@ import { ListTestimony } from "./ListTestimony";
 import { scrollUp } from "src/utilites/validations";
 
 export default function Footer(): JSX.Element {
-    const [nuevo, setNuevo] = useState<boolean>(false);
+    const [newT, setNewT] = useState<boolean>(false);
 
     useEffect(() => { scrollUp(); }, [])
 
@@ -21,11 +21,11 @@ export default function Footer(): JSX.Element {
                 />
                 <section className="testimony">
                     <div className="testimony_new">
-                        {!nuevo
+                        {!newT
                             ? <button type="button"
-                                className="ui brownie button"
-                                onClick={() => setNuevo(!nuevo)}>Nuevo</button>
-                            : <NewTestimony />
+                                className="ui button brownie"
+                                onClick={() => setNewT(!newT)}>Nuevo</button>
+                            : <NewTestimony hideNewTestimony={() => setNewT(!newT)} />
                         }
                     </div>
                     <ListTestimony />

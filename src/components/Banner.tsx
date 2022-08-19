@@ -5,7 +5,8 @@ export const Banner = ({title, description}: BannerProperties): JSX.Element => {
         <article className="banner">
             <div className="banner_info">
                 <h2>{title}</h2>
-                <p>{description}</p>
+                {/* <p>{description}</p> */}
+                <div dangerouslySetInnerHTML={{__html: description}}></div>
             </div>
         </article>
     )

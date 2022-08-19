@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Layout from "src/layout/Layout";
 import styled from "styled-components";
-import { pictures } from "src/utilites/images";
+import { brownies } from "src/utilites/images";
 
-const Acercade = styled.section`
+const About = styled.section`
     width: 80%;
     margin: 0 auto;
     padding: 20px;
@@ -15,20 +15,11 @@ const Acercade = styled.section`
     }
 `;
 
-const Titulo = styled.h2`margin-bottom: 20px`;
+const Title = styled.h2`margin-bottom: 20px`;
 
-const Contenido = styled.p`text-align: justify;`;
+const Content = styled.p`text-align: justify;`;
 
-const Ir = styled(Link)`
-    color: #64442e;
-    font-size: 15px;
-    &:hover {
-        color: #64442e;
-        border-bottom: 1px solid #64442e;
-    }
-`;
-
-const Imagen = styled.img`
+const Image = styled.img`
     height: 215px;
     float: left;
     margin-right: 20px;
@@ -38,38 +29,37 @@ const Imagen = styled.img`
         height: 170px;
     }
 `
-const Boton = styled.div`margin-top: 35px;`;
 
-export default function Footer(): JSX.Element {
+export default function Footer (): JSX.Element {
+    // const navigate = useNavigate();
+
     return (
         <Layout>
-            <Acercade>
-                <Titulo className="title brownie">Acerca de Nosotros</Titulo>
-                <Imagen src={pictures[0]} alt="" />
-                <Contenido>
+            <About>
+                <Title className="title brownie">Acerca de Nosotros</Title>
+                <Image src={brownies[0]} alt="" />
+                <Content>
                     En 2021 estando en tiempos de pandemia aparentemente sin mucho que hacer decidimos elaborar brownies
                     que fueran echos con amor y que tuviera un verdadero sabor a Chocolate jalicience.
                     Se hicieron muchas pruebas y los diferentes comentarios de los clientes ayudaron a seguir
                     mejorando nuestra receta, llegando a tener una gran variedad de Brownies, Mini-Brownies,
                     Brownies Gigantes y bolitas de brownie.
-                </Contenido>
-                <Contenido>
+                </Content>
+                <Content>
                     Hoy en día siguen siendo muy importantes todas las sugerencias, pues gracias a nuestros clientes,
                     lo hemos logrado.
                     Siempre buscamos elaborar alimentos de una forma segura, que permitan a la gente sentir una
                     experiencia agradable y compartir en familia o con amigos momentos especiales de su vida.
-                </Contenido>
-                <Contenido>
+                </Content>
+                <Content>
                     Seleccionamos cuidadosamente nuestras materias primas, lo que nos ha permitido posicionarnos con
                     un excelen
-                </Contenido>
-                <Boton>
-                    <Ir to="/testimony">
-                        Testimonios &nbsp;
-                        <i className="right arrow icon"></i>
-                    </Ir>
-                </Boton>
-            </Acercade>
+                </Content>
+                {/* <button onClick={() => navigate('/testimony')} className="ui right labeled icon button primary">
+                    <i className="right arrow icon"></i>
+                    Testimonios
+                </button> */}
+            </About>
         </Layout>
     )
 }

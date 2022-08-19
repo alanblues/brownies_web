@@ -6,27 +6,25 @@ export const useTerms = () => {
     const [toggleUser, setToggleUser] = useState({display: 'block', icon: 'left'})
 
     const toggleAcordion = (section: string): void => {
-        console.log(toggleDefinitions);
         switch (section) {
             case 'terms':
                 const { display, icon } = toggleTerms;
                  setToggleTerms({
                     display: display === 'block' ? 'none' : 'block',
-                    icon: icon === 'left' ? 'up' : 'left'
+                    icon: icon === 'left' ? 'angle down' : 'left'
                 });
                 break;
             case 'definitions':
                 const { display: view, icon: image } = toggleDefinitions;
                 setToggleDefinitions({
                     display: view == 'block' ? 'none' : 'block',
-                    icon: image === 'left' ? 'up' : 'left'
+                    icon: image === 'left' ? 'angle down' : 'left'
                 });
-                console.log(toggleDefinitions);
                 break;
             case 'user':
                 setToggleUser({
                     display: toggleUser.display === 'block' ? 'none' : 'block',
-                    icon: toggleUser.icon === 'left' ? 'up' : 'left'
+                    icon: toggleUser.icon === 'left' ? 'angle down' : 'left'
                 });
                 break;
         }

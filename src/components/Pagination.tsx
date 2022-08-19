@@ -66,7 +66,7 @@ export const Pagination = (props: any): JSX.Element => {
                     disabled={disabledNextButton()}
                     onClick={() => handlePagination('last')}
                 >
-                    Ultimo
+                    &Uacute;ltimo
                 </button>
             </div>
         </section>

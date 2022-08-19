@@ -7,12 +7,9 @@ export const ListTestimony = (): JSX.Element => {
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [perPage] = useState<number>(3);
 
-    const onNewPage = (newPage: number): void => {
-        scrollUp();
-        setCurrentPage(newPage);
-    }
+    const onNewPage = (newPage: number): void => { setCurrentPage(newPage); }
 
-    useEffect(()=> { scrollUp(); }, [])
+    useEffect(()=> { scrollUp(); }, [onNewPage])
 
     return (
         <>
