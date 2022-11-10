@@ -16,7 +16,7 @@ export default function Contact(): JSX.Element {
     return (
         <Layout>
             <section className="terms">
-                <article className="terms_conditions">
+                <article>
                     <h3 onClick={() => toggleAcordion('terms')}>
                         Términos y condiciones de los sitios
                         <a>
