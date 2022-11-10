@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-export default function MenuWeb (): JSX.Element {
+export default function MenuWeb(): JSX.Element {
+    const { pathname } = useLocation();
+
     return (
         <header>
             <nav className="menu">
-                <Link to="/">Inicio</Link>
-                <Link to="/contact">Contactanos</Link>
-                <Link to="/about">Acerca de</Link>
+                <Link className={pathname === '/' ? 'active' : ''} to="/">Inicio</Link>
+                <Link className={pathname === '/contact' ? 'active' : ''} to="/contact">Contactanos</Link>
+                <Link className={pathname === '/about' ? 'active' : ''} to="/about">Acerca de</Link>
             </nav>
         </header>
     );

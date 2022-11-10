@@ -1,7 +1,6 @@
 .delivery {
+    @extend %size_screen;
     width: 76%;
-    margin: 15px auto;
-    padding: 20px;
 
     border: 1px solid gainsboro;
     font-size: 16px;
@@ -43,8 +42,10 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
-    .delivery { width: 90%; }
+@media only screen and (max-width: 840px) {
+    .delivery {
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 850px) {

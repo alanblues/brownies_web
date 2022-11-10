@@ -9,20 +9,14 @@
             width: 17rem;
         }
 
-        h3 {
-            color: $h3;
-        }
+        h3 { color: $h3; }
 
-        ul li:not(:first-child) {
-            margin-top: 4px;
-        }
+        ul li:not(:first-child) { margin-top: 4px; }
 
         a {
             color: $footer_text;
             font-size: 15px;
-            &:hover {
-                color: $footer_text-hover;
-            }
+            &:hover { color: $footer_text-hover; }
         }
     }
 }
@@ -64,21 +58,15 @@
     color: $brownie;
     font-weight: normal;
 
-    &:hover {
-        border-bottom: 1px solid $brownie;
-    }
+    &:hover { border-bottom: 1px solid $brownie; }
 }
 
 @media only screen and (max-width: 470px) {
     .footer_content {
         flex-direction: column;
 
-        div:nth-child(2) {
-            margin-top: 30px;
-        }
+        div:nth-child(2) { margin-top: 30px; }
 
-        a {
-            font-size: 16px;
-        }
+        a { font-size: 16px; }
     }
 }

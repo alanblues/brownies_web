@@ -1,4 +1,3 @@
-// import { useNavigate } from "react-router-dom";
 import Layout from "src/layout/Layout";
 import styled from "styled-components";
 import { brownies } from "src/utilites/images";
@@ -8,11 +7,8 @@ const About = styled.section`
     margin: 0 auto;
     padding: 20px;
 
-    @media only screen and (max-width: 800px) { width: 95%; }
-    @media only screen and (max-width: 420px) {
-        width: 100%;
-        padding: 15px;
-    }
+    @media only screen and (max-width: 840px) { width: 95%; }
+    @media only screen and (max-width: 420px) { padding: 15px; }
 `;
 
 const Title = styled.h2`margin-bottom: 20px`;
@@ -31,8 +27,6 @@ const Image = styled.img`
 `
 
 export default function Footer (): JSX.Element {
-    // const navigate = useNavigate();
-
     return (
         <Layout>
             <About>

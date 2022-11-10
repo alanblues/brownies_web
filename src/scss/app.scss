@@ -28,19 +28,12 @@ ul {
     &_info {
         display: flex;
         justify-content: center;
-        width: 80%;
-        margin: 0 auto;
         flex-direction: column;
+        margin: 0 auto;
         padding: 35px 20px;
+        @extend %size_screen;
 
-        @media only screen and (max-width: 800px) {
-            width: 95%;
-        }
-
-        @media only screen and (max-width: 420px) {
-            width: 100%;
-            padding: 25px 15px;
-        }
+        @media only screen and (max-width: 420px) { padding: 25px 15px; }
 
         h2 {
             color: black;
