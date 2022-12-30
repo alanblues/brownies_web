@@ -16,11 +16,39 @@
     article:nth-child(2) {
         margin-top: 50px;
     }
-    
+
     article {
-        h1 { margin-bottom: 0px; }
+        h1 {
+            margin-bottom: 0px;
+        }
 
         .home_icons {
+            img {
+                margin-right: 5px;
+                border: 1px solid $brownie_light;
+                border-radius: 4px;
+                margin-top: 8px;
+            }
+            .border {
+                border: none;
+                border-top-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+        }
+
+        .home_icons2 {
+            .carousel .slider-wrapper {
+                width: 50%;
+            }
+            // .carousel.carousel-slider .control-arrow {
+            //     background-color: #64442e;
+            //     margin-top: 0px;
+            //     top: 45%;
+            //     bottom: 45%;
+            //     padding: 0px 8px;
+            //     border-radius: 50%;
+            // }
+
             img {
                 margin-right: 5px;
                 border: 1px solid $brownie_light;

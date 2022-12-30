@@ -16,14 +16,30 @@
         width: 122px;
     }
     @media only screen and (max-width: 470px) {
-        // width: 115px;
         width: 168px;
     }
     @media only screen and (max-width: 428px) {
         width: 45%;
-        // width: 163px;
     }
     @media only screen and (max-width: 328px) {
         width: 135px;
     }
 }
+
+// .home .home_icons2 {
+//     @media only screen and (max-width: 768px) {
+//         width: 225px;
+//         .carousel .slider-wrapper {
+//             width: 20%;
+//         }
+//         // .carousel.carousel-slider .control-arrow {
+//         //     background-color: #64442e;
+//         //     margin-top: 0px;
+//         //     top: 45%;
+//         //     bottom: 45%;
+//         //     padding: 0px 8px;
+//         //     border-radius: 50%;
+//         // }
+//     }
+    
+// }
