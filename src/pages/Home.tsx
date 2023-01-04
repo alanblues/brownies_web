@@ -1,7 +1,6 @@
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-
 import Layout from "src/layout/Layout";
 import { icons, brownies } from "src/utilites/images";
 
@@ -25,7 +24,7 @@ export default function Home(): JSX.Element {
                     <p className="title">Opciones para todos los gustos</p>
 
                     <div className="home_icons2">
-                        <Carousel >
+                        <Carousel>
                             {brownies.map((x, index) => (
                                 <img key={index} className="icon border" src={x} />
                             ))}
