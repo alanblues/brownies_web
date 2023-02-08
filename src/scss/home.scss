@@ -38,17 +38,16 @@
 
         .home_icons2 {
             .carousel .slider-wrapper {
-                width: 50%;
+                width: 45%;
                 @media only screen and (max-width: 767px) {
-                    width: 80%;
+                    width: 50%;
                 }
                 @media only screen and (max-width: 400px) {
                     width: 75%;
                 }
             }
             .carousel.carousel-slider .control-arrow {
-                background-color: $brownie;// #64442e;
-                // margin-top: 0px;
+                background-color: $brownie;
                 top: 45%;
                 bottom: 45%;
                 padding: 0px 8px;
