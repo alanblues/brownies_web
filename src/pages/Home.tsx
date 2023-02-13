@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
                     <p className="title">Opciones para todos los gustos</p>
 
                     <div className="home_icons2">
-                        <Carousel>
+                        <Carousel showIndicators={false} >
                             {brownies.map((x, index) => (
                                 <img key={index} className="icon border" src={x} alt="" />
                             ))}
